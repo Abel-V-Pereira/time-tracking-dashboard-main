@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+ --purple600: hsl(246, 80%, 60%);
+
+--orange300 /*(work)*/: hsl(15, 100%, 70%);
+--blue300 /*(play)*/: hsl(195, 74%, 62%);
+--pink400 /*(study)*/: hsl(348, 100%, 68%);
+--green400 /*(exercise)*/: hsl(145, 58%, 55%);
+--purple700 /*(social)*/: hsl(264, 64%, 52%);
+--yellow300 /*(self care)*/: hsl(43, 84%, 65%);
+
+--navy950: hsl(226, 43%, 10%);
+--navy900: hsl(235, 46%, 20%);
+--purple500: hsl(235, 45%, 61%);
+--navy200: hsl(236, 100%, 87%);
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Rubik', sans-serif;
+  background-color: var(--navy950);
+  color: white;
+  font-size: 1.125rem;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.dashboard {
+  width: 100%;
+  max-width: 375px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.profile-card {
+  background-color: var(--navy900);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.profile-info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--purple600);
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.profile-info img {
+  width: 4.5rem;
+  height: 4.5rem;
+  border: 3px solid white;
+  border-radius: 50%;
+}
+
+.profile-text .report-for {
+  color: var(--navy200);
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+}
+
+.profile-text h1 {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.time-periods {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.period-btn {
+  background: none;
+  border: none;
+  color: var(--purple500);
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+
+.period-btn:hover,
+.period-btn.active {
+  color: white;
+}
+
+.tracking-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card {
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+  height: 10rem;
+}
+
+.card-header {
+  height: 3rem;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 1rem;
+}
+
+.card-header img {
+  position: absolute;
+  top: -0.5rem;
+  right: 1rem;
+}
+
+.card.work { background-color: var(--orange300); }
+.card.play { background-color: var(--blue300); }
+.card.study { background-color: var(--pink400); }
+.card.exercise { background-color: var(--green400); }
+.card.social { background-color: var(--purple700); }
+.card.self-care { background-color: var(--yellow300); }
+
+.card-content {
+  background-color: var(--navy900);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  position: relative;
+  top: -0.5rem;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+.card-content:hover {
+  background-color: var(--purple500);
+}
+
+.card-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.card-title h2 {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.ellipsis {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+}
+
+.card-stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hours {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.previous {
+  color: var(--navy200);
+  font-size: 0.9rem;
+}
+
+.card.error .card-content {
+  background-color: rgba(255, 0, 0, 0.1);
+  cursor: not-allowed;
+}
+
+.card.error .card-content:hover {
+  background-color: rgba(255, 0, 0, 0.15);
+}
+
+.card.error .hours,
+.card.error .previous {
+  color: #ff6b6b;
+}

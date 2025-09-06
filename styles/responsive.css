@@ -1,0 +1,124 @@
+@media screen and (min-width: 48rem) and (max-width: 63.938rem) {
+    body {
+        padding: 2rem;
+    }
+
+    .dashboard {
+        max-width: 768px;
+        margin: 0 auto;
+    }
+
+    .profile-card {
+        max-width: 540px;
+        margin: 0 auto;
+    }
+
+    .profile-info {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 2rem;
+    }
+
+    .profile-info img {
+        margin-bottom: 0;
+    }
+
+    .time-periods {
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .tracking-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .card-stats {
+        margin-top: 0.5rem;
+    }
+
+    .hours {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (min-width: 64rem) {
+    body {
+        padding: 2rem;
+    }
+
+    .dashboard {
+        max-width: 1110px;
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .profile-card {
+        width: 255px;
+        flex-shrink: 0;
+    }
+
+    .profile-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        padding: 2rem 2rem 4rem 2rem;
+    }
+
+    .profile-info img {
+        width: 5rem;
+        height: 5rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .profile-text h1 {
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+
+    .time-periods {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 1.5rem 2rem;
+    }
+
+    .tracking-cards {
+        flex: 1;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .card {
+        height: 14rem;
+        width: auto;
+    }
+
+    .card-content {
+        padding: 1.75rem;
+    }
+
+    .card-title h2 {
+        font-size: 1rem;
+    }
+
+    .card-stats {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .hours {
+        font-size: 2.9rem;
+        margin: 0.5rem 0;
+    }
+
+    .previous {
+        font-size: 0.8rem;
+    }
+}
