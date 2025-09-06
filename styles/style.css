@@ -29,7 +29,7 @@ body {
 
 .dashboard {
   width: 100%;
-  max-width: 375px;
+  max-width: 23.438rem;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -55,7 +55,7 @@ body {
 .profile-info img {
   width: 4.5rem;
   height: 4.5rem;
-  border: 3px solid white;
+  border: 0.188rem solid white;
   border-radius: 50%;
 }
 

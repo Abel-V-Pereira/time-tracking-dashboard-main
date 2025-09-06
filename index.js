@@ -9,7 +9,7 @@ async function fetchData() {
   renderHours("daily");
 }
 
-let periodButtons = document.querySelectorAll('.period-btn')
+const periodButtons = document.querySelectorAll('.period-btn')
 
 periodButtons.forEach((btn) => {
   btn.addEventListener('click', () => {
@@ -24,15 +24,15 @@ periodButtons.forEach((btn) => {
 
 function renderHours(period) {
 
-  let hours = document.querySelectorAll('.hours');
-  let previous = document.querySelectorAll('.previous');
+  const hours = document.querySelectorAll('.hours');
+  const previous = document.querySelectorAll('.previous');
 
   hours.forEach((cnt, i) => {
     cnt.textContent = `${fetchedData[i].timeframes[period].current}hrs`
   })
 
   previous.forEach((cnt, i) => {
-    let label = 
+    const label = 
       period === "daily"
       ? "Yesterday"
       : period === "weekly"
